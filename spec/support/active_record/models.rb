@@ -1,7 +1,7 @@
 class Dummy < ActiveRecord::Base
   include AASM
 
-  aasm column: 'state' do
+  aasm column: :state do
     has_history
 
     state :a, initial: true
