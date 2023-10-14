@@ -16,7 +16,7 @@ Add this line to your application's Gemfile:
 
 ### Active Record
 
-Add migration:
+To create a migration run the task `bin/rails g aasm_history_migration`:
 
     create_table :state_histories do |t|
       t.string   :state
@@ -29,7 +29,7 @@ Add migration:
     
 It will create state history table - common for all classes.
 
-Create StateHistory class
+To create a model run the task `bin/rails g aasm_history_model`
 
     class StateHistory < ActiveRecord::Base
       belongs_to :stateable, polymorphic: true
